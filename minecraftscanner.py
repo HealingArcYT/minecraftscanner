@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from subprocess import Popen, PIPE
 import sys
 from mcstatus import MinecraftServer
