@@ -1,9 +1,7 @@
 # minecraftscanner
 ## Usage
-minecraftscanner.py \<ip> \[ip2] \[ip3]
-
-(Not implemented yet)
-minecraftscanner.py -version \<version> \<ip> \[ip2] \[ip3]
+minecraftscanner.py \<ip> \[ip2] \[ip3]\
+minecraftscanner.py -version \<version> \[-version \<version2>] \<ip> \[ip2] \[ip3]
 
 ## Installation
 Install nmap\

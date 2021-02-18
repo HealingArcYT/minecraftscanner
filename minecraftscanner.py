@@ -6,8 +6,9 @@ from mcstatus import MinecraftServer
 
 def main(argv):
     ip = []
+    version = []
     if "-version" in argv:
-        version = (lambda argv: argv[x+1] for x in range(len(argv)) if argv[x] == "-version" or argv[x] == "-v")(argv)
+        version = [argv[x+1] for x in range(len(argv)) if argv[x] == "-version" or argv[x] == "-v"]
     ip += [argv[x] for x in range(len(argv)) if argv[x] != "-version" or argv[x] != "-v" or argv[x-1] != "-version" or argv[x-1] != "-v"]
 
     for i in ip:
@@ -23,7 +24,8 @@ def main(argv):
             except ValueError:
                 pass
     for i in outs:
-        print(i["ipfull"], i["version"])
+        if i["version"] in version or version == []:
+            print(i["ipfull"], i["version"])
 
 
 
