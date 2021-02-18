@@ -23,9 +23,10 @@ def main(argv):
                 outs += {"ipfull":f"{i}:{port}", "version":server.status().version.name}
             except ValueError:
                 pass
-    for i in outs:
-        if i["version"] in version or version == []:
-            print(i["ipfull"], i["version"])
+    if ip != []:
+        for i in outs:
+            if i["version"] in version or version == []:
+                print(i["ipfull"], i["version"])
 
 
 
