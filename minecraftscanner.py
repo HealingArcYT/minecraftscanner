@@ -12,7 +12,7 @@ def main(argv):
     ip += [argv[x] for x in range(len(argv)) if argv[x] != "-version" or argv[x] != "-v" or argv[x-1] != "-version" or argv[x-1] != "-v"]
 
     for i in ip:
-        proc = Popen(["nmap", "-sT", "-Pn", f"{i}", "-p-"], stdout=PIPE)
+        proc = Popen(["nmap", "-sT",  f"{i}", "-p-"], stdout=PIPE)
         (out, err) = proc.communicate()
         print(len(out)*"\b")
         outs = []
