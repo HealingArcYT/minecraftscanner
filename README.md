@@ -9,4 +9,4 @@ minecraftscanner.py -version \<version> \<ip> \[ip2] \[ip3]
 Install nmap\
 Install mcscanner for Python:\
 python3 -m pip install mcscanner\
-Download minecraftscanner.py\
+Download minecraftscanner.py
